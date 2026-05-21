@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>USA Exclusive Rewards | Cash & Gift Cards</title>
+  <meta name="description" content="Claim your exclusive rewards: CashApp, Zelle, Walmart, Royal Cruise, and more. Limited-time USA offers.">
+  <!-- Google Fonts + Premium Baseline -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #f7f9fc 0%, #eef2f5 100%);
+      color: #1A2C3E;
+      padding: 20px 16px 60px;
+    }
+
+    /* premium container */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* header card */
+    .hero {
+      background: radial-gradient(circle at 10% 30%, #ffffff, #ffffff);
+      border-radius: 48px;
+      padding: 32px 24px;
+      margin-bottom: 28px;
+      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0,0,0,0.02);
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.6);
+      backdrop-filter: blur(0px);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1e2f3f;
+      color: #FFD966;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 6px 14px;
+      border-radius: 40px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #1A2C3E 0%, #2C4C6C 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .subhead {
+      font-size: 1.05rem;
+      color: #3a5a78;
+      line-height: 1.4;
+      font-weight: 500;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .highlight {
+      background: #FFEED9;
+      padding: 4px 10px;
+      border-radius: 40px;
+      font-weight: 700;
+      color: #c45c00;
+    }
+
+    /* time indicator */
+    .urgent {
+      background: #FFF2E0;
+      border-radius: 60px;
+      padding: 10px 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #bc6f1a;
+      margin-top: 18px;
+      backdrop-filter: blur(4px);
+    }
+
+    /* offer grid */
+    .offers-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    /* premium card item */
+    .offer-card {
+      background: white;
+      border-radius: 28px;
+      transition: all 0.2s ease;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0,0,0,0.01);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 16px 20px;
+      cursor: pointer;
+      border: 1px solid #f0f2f5;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
+      border-color: #cbdde9;
+    }
+
+    .offer-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 2;
+    }
+
+    .icon-badge {
+      width: 52px;
+      height: 52px;
+      background: #f1f5f9;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      font-weight: 600;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.02), 0 4px 8px rgba(0,0,0,0.02);
+    }
+
+    .offer-details {
+      flex: 1;
+    }
+
+    .offer-title {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.3px;
+      color: #0f2a3b;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .prize {
+      background: #eef2ff;
+      border-radius: 20px;
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #1e4a76;
+    }
+
+    .vendor {
+      font-size: 0.75rem;
+      color: #557c9c;
+      margin-top: 6px;
+      font-weight: 500;
+    }
+
+    .claim-btn {
+      background: #000000;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      transition: 0.2s;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(100deg, #1e2f3f 0%, #1f3e54 100%);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .claim-btn:active {
+      transform: scale(0.96);
+    }
+
+    /* footer trust */
+    .trust-bar {
+      background: rgba(255,255,240,0.8);
+      backdrop-filter: blur(4px);
+      border-radius: 50px;
+      padding: 12px 16px;
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #2c5a77;
+      margin-top: 10px;
+      border: 1px solid #ffffff;
+    }
+
+    .fineprint {
+      text-align: center;
+      font-size: 0.7rem;
+      color: #6f8faa;
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid #dce5ec;
+    }
+
+    @media (max-width: 560px) {
+      body {
+        padding: 16px 12px 40px;
+      }
+      .offer-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+      }
+      .claim-btn {
+        justify-content: center;
+        width: 100%;
+      }
+      .offer-info {
+        gap: 12px;
+      }
+      h1 {
+        font-size: 1.9rem;
+      }
+      .hero {
+        padding: 24px 18px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .offer-title {
+        font-size: 1.1rem;
+      }
+      .icon-badge {
+        width: 44px;
+        height: 44px;
+        font-size: 1.3rem;
+      }
+    }
+
+    /* shimmer for cta */
+    .glow-text {
+      transition: all 0.2s;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- premium header -->
+  <div class="hero">
+    <div class="badge">✦ USA EXCLUSIVE REWARDS ✦</div>
+    <h1>Claim Your <span style="background: linear-gradient(120deg, #F7B42C, #FC575E); -webkit-background-clip: text; background-clip: text; color: transparent;">Premium</span> Bonus</h1>
+    <div class="subhead">
+      Verified for <strong>USA residents</strong> — Limited high-value gifts, CashApp, Zelle, and top retail cards.
+    </div>
+    <div class="urgent">
+      ⏳ <span>Today's top offers — while supplies last</span> 🔥
+    </div>
+  </div>
+
+  <!-- offers grid: all links exactly as provided -->
+  <div class="offers-grid" id="offersContainer">
+    <!-- data will be injected via js but we can also static, but keep dynamic for maintainability -->
+  </div>
+
+  <!-- trust signal -->
+  <div class="trust-bar">
+    ✅ 100% USA legal rewards • 🔒 Secure redirect • 🎁 Instant access after verification
+  </div>
+  <div class="fineprint">
+    *Participation requires completing sponsor offers. Rewards distributed by respective partners. Terms apply.<br>
+    This is an independent advertising portal. CashApp, Zelle, Walmart, Netflix are trademarks of their respective owners.
+  </div>
+</div>
+
+<script>
+  // --------------------------------------------------------------
+  // OFFERS DATA (all links exactly provided, including all CashApp, Zelle, cruises, etc)
+  // --------------------------------------------------------------
+  const offers = [
+    { name: "CashApp", value: "$850", vendor: "Special Bonus", link: "https://www.af9m8trk.com/J6H116EG/5JY122KX/?s1=kilo", icon: "💰" },
+    { name: "Zelle", value: "$750", vendor: "Instant Transfer", link: "https://www.af9m8trk.com/J6H116EG/8LP123XC/?s1=kio", icon: "💸" },
+    { name: "Royal Cruise", value: "$100", vendor: "Vacation Voucher", link: "https://www.af9m8trk.com/J6H116EG/R98122L2/?s1=kio", icon: "🚢" },
+    { name: "Netflix", value: "$100", vendor: "Gift Card", link: "https://www.af9m8trk.com/J6H116EG/KDQ122LY/?s1=kio", icon: "🎬" },
+    { name: "Family Dollar", value: "$500", vendor: "Shopping Spree", link: "https://www.af9m8trk.com/J6H116EG/TTR12295/?s1=oppa", icon: "🛍️" },
+    { name: "Walmart", value: "$1,000", vendor: "Superstore Credit", link: "https://www.af9m8trk.com/J6H116EG/T6M12294/?s1=Sus", icon: "🛒" },
+    { name: "American Eagle", value: "$100", vendor: "Style Cash", link: "https://www.af9m8trk.com/J6H116EG/MJP12296/?s1=kkk", icon: "👕" },
+    { name: "RewardZinga", value: "$1,000", vendor: "CashApp deposit", link: "https://www.af9m8trk.com/J6H116EG/9PC123FX/?s1=Moloy", icon: "⚡" },
+    { name: "My American Prizes", value: "$1,000", vendor: "Amazon Gift Card", link: "https://www.af9m8trk.com/J6H116EG/TJ2123FW/?s1=Moloy", icon: "🎁" },
+    { name: "UpLevelRewards", value: "$1,000", vendor: "Cash Deposit", link: "https://www.af9m8trk.com/J6H116EG/4K1123XK/?s1=Moloy", icon: "🏆" },
+    { name: "OkWow", value: "$650", vendor: "CashApp Funds", link: "https://www.af9m8trk.com/J6H116EG/3AF122KW/?s1=Moloy", icon: "✨" },
+    { name: "UpLevelRewards - Target", value: "$750", vendor: "Target GiftCard", link: "https://www.af9m8trk.com/J6H116EG/HMG123XJ/?s1=Moloy", icon: "🎯" }
+  ];
+
+  // Helper: open link in same tab (to ensure CPA tracking works properly)
+  function handleClaim(offerLink, offerName) {
+    // optional: you could add a small analytics ping or just redirect
+    if (offerLink && offerLink !== "#") {
+      window.location.href = offerLink;
+    } else {
+      console.warn("no link provided");
+    }
+  }
+
+  // Build premium cards
+  const container = document.getElementById("offersContainer");
+  if (container) {
+    offers.forEach(offer => {
+      const card = document.createElement("div");
+      card.className = "offer-card";
+      // Add role for accessibility
+      card.setAttribute("data-link", offer.link);
+      
+      // Left side: icon + info
+      const infoDiv = document.createElement("div");
+      infoDiv.className = "offer-info";
+      
+      const iconSpan = document.createElement("div");
+      iconSpan.className = "icon-badge";
+      iconSpan.innerText = offer.icon;
+      
+      const detailsDiv = document.createElement("div");
+      detailsDiv.className = "offer-details";
+      
+      const titleSpan = document.createElement("div");
+      titleSpan.className = "offer-title";
+      titleSpan.innerHTML = `${offer.name} <span class="prize">${offer.value}</span>`;
+      
+      const vendorSpan = document.createElement("div");
+      vendorSpan.className = "vendor";
+      vendorSpan.innerText = offer.vendor;
+      
+      detailsDiv.appendChild(titleSpan);
+      detailsDiv.appendChild(vendorSpan);
+      infoDiv.appendChild(iconSpan);
+      infoDiv.appendChild(detailsDiv);
+      
+      // Claim button
+      const claimBtn = document.createElement("button");
+      claimBtn.className = "claim-btn";
+      claimBtn.innerHTML = `Claim now →`;
+      
+      // Attach event to button
+      claimBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        handleClaim(offer.link, offer.name);
+      });
+      
+      // optional: whole card click also works (but not double fire)
+      card.addEventListener("click", (e) => {
+        // avoid if click originated from button
+        if (e.target !== claimBtn && !claimBtn.contains(e.target)) {
+          handleClaim(offer.link, offer.name);
+        }
+      });
+      
+      card.appendChild(infoDiv);
+      card.appendChild(claimBtn);
+      container.appendChild(card);
+    });
+  }
+
+  // Additional note: ensure all links are exactly as they were provided, also check the "CashApp $850" and "RewardZinga - CashApp $1000"
+  // and all others. Also added "UpLevelRewards - Target $750" and the rest.
+  // Also includes "My American Prizes", "OkWow", etc.
+  // Mobile first styling with premium glassy feel, high contrast & clear CTAs.
+  // verified that each link preserved exact parameters (s1 values and full affiliate URL)
+</script>
+</body>
+</html>
